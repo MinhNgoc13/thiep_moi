@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World! Mình Tốt Nghiệp Rồi Nhé 🎀</title>
+    <style>
+        /* Định hình phong cách toàn trang - Tone hồng pastel dễ thương */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffeef2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4a3b32;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Khung bao ngoài thiết kế như cửa sổ Macbook dễ thương */
+        .window-container {
+            width: 90%;
+            max-width: 600px;
+            background: #ffffff;
+            border: 3px solid #ffb7c5;
+            border-radius: 12px;
+            box-shadow: 0px 8px 24px rgba(255, 183, 197, 0.4);
+            margin: 40px 20px;
+            overflow: hidden;
+        }
+
+        /* Thanh tiêu đề giả lập Terminal nhưng có nơ */
+        .window-header {
+            background: #ffb7c5;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .window-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Nút cửa sổ biến thành hình trái tim/chấm hồng đáng yêu */
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #ff6b8b;
+            border-radius: 50%;
+        }
+        .dot:nth-child(2) { background: #ff8da1; }
+        .dot:nth-child(3) { background: #ffcbd5; }
+
+        .window-title {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        /* Nội dung thiệp mời bên trong */
+        .window-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff527b;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-family: 'Courier New', Courier, monospace;
+            background: #fff0f3;
+            color: #ff527b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .icon-ribbon {
+            font-size: 45px;
+            margin: 10px 0;
+            animation: bounce 2s infinite;
+        }
+
+        /* Khung hiển thị code - nơi dân IT flex thông tin sự kiện */
+        .code-block {
+            background: #2c2c2c;
+            color: #fca3b7;
+            text-align: left;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 20px 0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            overflow-x: auto;
+        }
+
+        .code-keyword { color: #ff79c6; }
+        .code-string { color: #f1fa8c; }
+        .code-comment { color: #6272a4; font-style: italic; }
+
+        .invitation-text {
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        /* Chiếc nút bấm RSVP siêu bánh bèo */
+        .rsvp-btn {
+            background: #ff6b8b;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .rsvp-btn:hover {
+            background: #ff527b;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 139, 0.6);
+        }
+
+        /* Hiệu ứng nơ nhún nhảy dễ thương */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="window-container">
+        <div class="window-header">
+            <div class="window-buttons">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="window-title">graduation_ceremony.exe</div>
+            <div style="color: white; font-size: 14px;">🎀</div>
+        </div>
+
+        <div class="window-content">
+            <div class="icon-ribbon">🎀💻🎓</div>
+            <h1>HELLO WORLD!</h1>
+            <div class="subtitle">&lt;br&gt; Mình Tốt Nghiệp Rồi Nè! &lt;/br&gt;</div>
+            
+            <p class="invitation-text">
+                Sau bao nhiêu ngày tháng "vật lộn" với deadline, những đêm thức code đầy nước mắt, cuối cùng công chúa IT cũng đã lấy được bằng rồi! Trân trọng kính mời bạn đến chung vui với mình nhé!
+            </p>
+
+            <div class="code-block">
+                <span class="code-comment">// Cập nhật trạng thái hệ thống</span><br>
+                <span class="code-keyword">const</span> <span style="color: #50fa7b;">DevName</span> = <span class="code-string">"Tên Của Bạn 🎀"</span>;<br>
+                <span class="code-keyword">const</span> <span style="color: #50fa7b;">Status</span> = <span class="code-string">"Graduated 🎓"</span>;<br>
+                <br>
+                <span class="code-comment">/* THÔNG TIN BUỔI LỄ */</span><br>
+                <span class="code-keyword">let</span> timeline = {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;date: <span class="code-string">"Ngày ... tháng ... năm 2026"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;time: <span class="code-string">"08:00 sáng"</span>,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;location: <span class="code-string">"Hội trường Đại học ABC"</span><br>
+                };<br>
+                <br>
+                <span class="code-keyword">if</span> (youAreFree) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="code-string">"Đi chụp hình xinh với mình nha! 🥰"</span>);<br>
+                }
+            </div>
+
+            <p class="invitation-text" style="font-weight: bold; color: #ff527b;">
+                Sự hiện diện của bạn chính là món quà lớn nhất đối với mình!
+            </p>
+
+            <a href="#" target="_blank" class="rsvp-btn">Xác Nhận Đi Bắn Ảnh 📸🎀</a>
+        </div>
+    </div>
+
+</body>
+</html>
