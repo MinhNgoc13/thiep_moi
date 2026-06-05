@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Secret Canva Template - Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Pinyon+Script&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F4EBE1;
+            --wine: #7A2021;
+            --pk: #C39499;
+            --pk-lt: #D3A7A9;
+            --bl: #8DA3BA;
+            --bl-lt: #A0B2C6;
+            --br: #C0AFA2;
+            --br-lt: #CDBCB0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #c8ccd2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .page {
+            width: 420px;
+            min-height: 900px;
+            background: var(--bg);
+            border-radius: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 12px 40px rgba(0,0,0,0.18);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 38%;
+            background-image:
+                linear-gradient(to right, rgba(122,32,33,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(122,32,33,0.05) 1px, transparent 1px);
+            background-size: 18px 18px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px 28px 40px;
+        }
+
+        /* ===== TITLE ===== */
+        .title-section {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .title-section::before,
+        .title-section::after {
+            content: '✦';
+            position: absolute;
+            font-size: 14px;
+            color: var(--wine);
+            opacity: 0;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        .title-section::before {
+            top: 8px;
+            left: 30px;
+            animation-delay: 0s;
+        }
+
+        .title-section::after {
+            top: 15px;
+            right: 25px;
+            animation-delay: 1s;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0; transform: scale(0.6); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 12px;
+            color: var(--wine);
+            pointer-events: none;
+            animation: blink 2.5s ease-in-out infinite;
+        }
+
+        .s1 { top: 5px; left: 20px; animation-delay: 0s; }
+        .s2 { top: 25px; right: 15px; animation-delay: 0.6s; font-size: 10px; }
+        .s3 { bottom: 10px; left: 50px; animation-delay: 1.2s; font-size: 8px; }
+        .s4 { bottom: 20px; right: 40px; animation-delay: 1.8s; font-size: 14px; }
+
+        .title-serif {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--wine);
+            text-transform: uppercase;
+            line-height: 1.05;
+            margin: 0;
+        }
+
+        .title-serif .line1 {
+            display: block;
+            font-size: 32px;
+            letter-spacing: 3px;
+            animation: fadeInUp 1.2s cubic-bezier(0.22,1,0.36,1) 0.2s both, shimmer 3s ease-in-out 1.4s infinite;
+        }
+
+        .title-serif .line2 {
+            display: block;
+            font-size: 38px;
+            letter-spacing: 0;
+            animation: fadeInUp 1.2s cubic-bezier(0.22,1,0.36,1) 0.5s both, shimmer 3s ease-in-out 1.8s infinite;
+        }
+
+        .title-script {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 70px;
+            color: var(--wine);
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            line-height: 1.1;
+            transform: rotate(-4deg);
+            animation: fadeInUpScript 1.2s cubic-bezier(0.22,1,0.36,1) 1.7s both, shimmer 3s ease-in-out 2.9s infinite;
+        }
+
+        @keyframes fadeInUpScript {
+            from { opacity: 0; transform: translateY(18px) rotate(-4deg); }
+            to   { opacity: 1; transform: rotate(-4deg); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        @keyframes drawIn {
+            from { opacity: 0; transform: rotate(-4deg) scale(0.85); }
+            to { opacity: 1; transform: rotate(-4deg) scale(1); }
+        }
+
+        @keyframes shimmer {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 0 transparent); }
+            25% { filter: brightness(1.15) drop-shadow(0 0 6px rgba(255,255,255,0.6)); }
+            50% { filter: brightness(1) drop-shadow(0 0 0 transparent); }
+            75% { filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,220,180,0.5)); }
+        }
+
+        /* ===== RSVP BUTTON ===== */
+        .rsvp-section {
+            text-align: center;
+            margin-top: 35px;
+            animation: fadeInUp 1s cubic-bezier(0.22,1,0.36,1) 2.2s both;
+        }
+
+        .btn-rsvp {
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            background: var(--wine);
+            padding: 14px 42px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(122,32,33,0.3), 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-rsvp::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; right: 0; bottom: 0;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-rsvp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(122,32,33,0.4), 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .btn-rsvp:hover::before {
+            left: 100%;
+        }
+
+        .btn-rsvp:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(122,32,33,0.3);
+        }
+
+        .rsvp-hint {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            color: #999;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+            animation: fadeInUp 1s cubic-bezier(0.22,1,0.36,1) 2.5s both;
+        }
+
+        /* ===== FOLDERS AREA ===== */
+        .folders-area {
+            margin-top: 35px;
+            position: relative;
+        }
+
+        /* ===== FOLDER CONTAINER ===== */
+        .folder {
+            position: relative;
+            margin-bottom: -12px;
+            transition: margin-bottom 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) both;
+        }
+
+        .folder.pink  { animation-delay: 1.0s; }
+        .folder.blue  { animation-delay: 1.2s; }
+        .folder.brown { animation-delay: 1.4s; }
+
+
+        /* ===== TAB — so le trái phải, mô phỏng bìa kẹp hồ sơ ===== */
+        .tab {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 7.5px;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+            color: #666;
+            padding: 9px 20px 7px;
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: -3px;
+            position: relative;
+            z-index: 99;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.25s ease;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab:hover { transform: scale(1.03); }
+
+        .pink .tab {
+            background: var(--pk-lt);
+            margin-left: 4px;
+        }
+
+        .blue .tab {
+            background: var(--bl-lt);
+            margin-left: auto;
+            margin-right: 22px;
+            display: block;
+        }
+
+        .brown .tab {
+            background: var(--br-lt);
+            margin-left: 4px;
+        }
+
+
+        /* ===== FOLDER WRAPPER — positioning context ===== */
+        .folder-wrapper {
+            position: relative;
+            height: 145px;
+            transition: height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+
+        /* ===== FOLDER BODY ===== */
+        .folder-body {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 145px;
+            z-index: 5;
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow:
+                0 2px 0 rgba(0,0,0,0.08),
+                0 4px 12px rgba(0,0,0,0.1),
+                0 1px 3px rgba(0,0,0,0.06),
+                inset 0 1px 0 rgba(255,255,255,0.35),
+                inset 0 -1px 0 rgba(0,0,0,0.05);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .folder-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 42px;
+            background: #fff;
+            z-index: 1;
+            filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.18));
+        }
+
+        .folder-body::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 8px;
+            right: 8px;
+            height: 5px;
+            background: #fff;
+            border-radius: 0 0 3px 3px;
+            z-index: 1;
+        }
+
+
+        /* ===== MÀU + BO GÓC + ĐƯỜNG GẤP ===== */
+
+        .pink .folder-body {
+            background: linear-gradient(170deg, color-mix(in srgb, var(--pk), #fff 12%) 0%, var(--pk) 30%, color-mix(in srgb, var(--pk), #000 8%) 100%);
+            border-radius: 0 12px 12px 12px;
+            z-index: 15;
+        }
+
+        .pink .folder-body::before {
+            clip-path: url(#clipStepRight);
+        }
+
+        .blue .folder-body {
+            background: linear-gradient(190deg, color-mix(in srgb, var(--bl), #fff 12%) 0%, var(--bl) 30%, color-mix(in srgb, var(--bl), #000 8%) 100%);
+            border-radius: 12px 4px 12px 12px;
+            z-index: 10;
+        }
+
+        .blue .folder-body::before {
+            clip-path: url(#clipStepLeft);
+        }
+
+        .brown .folder-body {
+            background: linear-gradient(170deg, color-mix(in srgb, var(--br), #fff 12%) 0%, var(--br) 30%, color-mix(in srgb, var(--br), #000 8%) 100%);
+            border-radius: 0 12px 12px 12px;
+        }
+
+        .brown .folder-body::before {
+            clip-path: url(#clipStepRight);
+        }
+
+        .pink .deco { z-index: 16; }
+        .blue .deco { z-index: 11; }
+        .brown .deco { z-index: 6; }
+
+
+        /* ===== ACTIVE ===== */
+        .folder.active {
+            margin-bottom: 10px;
+        }
+
+        .folder.active .folder-body {
+            z-index: 80;
+            transform: translateY(-2px);
+            box-shadow:
+                0 4px 0 rgba(0,0,0,0.06),
+                0 12px 28px rgba(0,0,0,0.14),
+                0 3px 8px rgba(0,0,0,0.08),
+                inset 0 1px 0 rgba(255,255,255,0.4),
+                inset 0 -1px 0 rgba(0,0,0,0.04);
+        }
+
+        .folder.active .deco {
+            opacity: 0;
+            transform: translateY(12px) scale(0.95);
+        }
+
+
+        /* ===== DOC PAPER — absolute overlay inside wrapper ===== */
+        .doc-paper {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            z-index: 50;
+            background: #fff;
+            border-radius: 10px 4px 10px 10px;
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.15),
+                0 1px 3px rgba(0,0,0,0.08);
+            opacity: 0;
+            pointer-events: none;
+            padding: 18px;
+            transform: translateY(-4px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+
+        .folder.active .doc-paper {
+            opacity: 1;
+            pointer-events: auto;
+            transform: none;
+            z-index: 85;
+        }
+
+        .doc-paper-inner {
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .doc-paper-inner h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            color: var(--wine);
+            margin: 0 0 8px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .doc-paper-inner ul {
+            padding-left: 16px;
+            margin: 6px 0;
+        }
+
+        .doc-paper-inner li { margin-bottom: 3px; }
+
+
+        /* ===== DECORATIVE ITEMS ===== */
+        .deco {
+            position: absolute;
+            pointer-events: none;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+        }
+
+        /* Card Retro */
+        .deco-retro {
+            top: -52px;
+            right: 50px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #0D2627, #1A4040);
+            border-radius: 5px;
+            box-shadow: -4px 5px 14px rgba(0,0,0,0.2);
+            transform: rotate(8deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .deco-retro::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        .deco-retro .retro-text {
+            font-family: 'Pinyon Script', cursive;
+            color: #F5E6BF;
+            font-size: 22px;
+            transform: rotate(-4deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .deco-retro .retro-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 5.5px;
+            color: rgba(245,230,191,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: absolute;
+            bottom: 9px;
+            right: 9px;
+            z-index: 1;
+        }
+
+        /* Kẹp bướm */
+        .deco-clip {
+            top: -18px;
+            right: 18px;
+            z-index: 35;
+            transform: rotate(-12deg);
+        }
+
+        .binder-clip { width: 26px; height: 40px; position: relative; }
+
+        .clip-body {
+            width: 22px; height: 30px;
+            background: #222;
+            border-radius: 3px;
+            position: absolute;
+            bottom: 0; left: 2px;
+            box-shadow: 1px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .clip-arm {
+            width: 18px; height: 14px;
+            border: 2.5px solid #333;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            position: absolute;
+            top: 0;
+        }
+
+        .clip-arm-l { left: 1px; }
+        .clip-arm-r { right: 1px; }
+
+        /* Đĩa than */
+        .deco-vinyl {
+            top: -50px;
+            left: 28px;
+            width: 90px; height: 90px;
+            border-radius: 50%;
+            background: #111;
+            box-shadow: -3px 5px 12px rgba(0,0,0,0.22), inset 0 0 0 3px #1a1a1a, inset 0 0 0 6px #222;
+            transform: rotate(-8deg);
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .deco-vinyl::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 22px; height: 22px;
+            margin: -11px 0 0 -11px;
+            background: #333;
+            border-radius: 50%;
+            border: 2px solid #444;
+            z-index: 2;
+        }
+
+        .deco-vinyl::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 50%;
+            background: repeating-radial-gradient(circle at center, transparent 0px, transparent 3px, rgba(255,255,255,0.04) 3.5px, transparent 4px);
+        }
+
+        .vinyl-label {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            text-align: center;
+        }
+
+        .vinyl-label .vt1 {
+            font-family: 'Pinyon Script', cursive;
+            color: #F5E6BF;
+            font-size: 9px;
+            display: block;
+            line-height: 1.1;
+        }
+
+        .vinyl-label .vt2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 4.5px;
+            color: rgba(245,230,191,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: block;
+            margin-top: 1px;
+        }
+
+        /* Polaroid */
+        .deco-polaroid {
+            top: -55px;
+            right: 38px;
+            width: 78px; height: 95px;
+            background: #fff;
+            padding: 6px 6px 18px;
+            box-shadow: -3px 4px 12px rgba(0,0,0,0.14), 0 1px 3px rgba(0,0,0,0.06);
+            transform: rotate(-6deg);
+            z-index: 3;
+        }
+
+        .polaroid-img {
+            width: 100%; height: 60px;
+            background: linear-gradient(160deg, #d4c5b5, #b8a898 40%, #a39080);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .polaroid-img::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 24px; height: 42px;
+            background: #6b5b4b;
+            border-radius: 12px 12px 0 0;
+            clip-path: polygon(20% 0%, 80% 0%, 95% 35%, 85% 100%, 15% 100%, 5% 35%);
+        }
+
+        .polaroid-img::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, transparent 35%, rgba(255,255,255,0.3) 50%, transparent 65%);
+        }
+
+        .polaroid-cap {
+            font-family: 'Inter', sans-serif;
+            font-size: 5.5px;
+            color: #888;
+            text-align: center;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Ghim giấy */
+        .deco-paperclip {
+            bottom: 22px;
+            right: 32px;
+            z-index: 35;
+            transform: rotate(18deg);
+        }
+    </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+    <defs>
+        <clipPath id="clipStepRight" clipPathUnits="objectBoundingBox">
+            <path d="
+                M 0 0.18
+                L 0.24 0.18
+                Q 0.33 0.18, 0.36 0.27
+                L 0.53 0.81
+                Q 0.56 0.90, 0.65 0.90
+                L 1 0.90
+                L 1 1
+                L 0 1
+                Z
+            "/>
+        </clipPath>
+        <clipPath id="clipStepLeft" clipPathUnits="objectBoundingBox">
+            <path d="
+                M 0 0.90
+                L 0 0
+                L 1 0
+                L 1 0.18
+                L 0.76 0.18
+                Q 0.67 0.18, 0.64 0.27
+                L 0.47 0.81
+                Q 0.44 0.90, 0.35 0.90
+                Z
+            "/>
+        </clipPath>
+    </defs>
+</svg>
+
+<div class="page">
+    <div class="content">
+
+        <div class="title-section">
+            <span class="sparkle s1">✦</span>
+            <span class="sparkle s2">✧</span>
+            <span class="sparkle s3">✦</span>
+            <span class="sparkle s4">✧</span>
+            <h1 class="title-serif">
+                <span class="line1">Welcome to</span>
+                <span class="line2">Graduation Ceremony</span>
+            </h1>
+            <span class="title-script">Dear Anh Thu </span>
+        </div>
+
+        <div class="folders-area">
+
+            <!-- HỒ SƠ HỒNG -->
+            <div class="folder pink" id="fPink">
+                <div class="deco deco-retro">
+                    <span class="retro-text">IT</span>
+                    <span class="retro-sub">BA</span>
+                </div>
+                <div class="deco deco-clip">
+                    <div class="binder-clip">
+                        <div class="clip-arm clip-arm-l"></div>
+                        <div class="clip-arm clip-arm-r"></div>
+                        <div class="clip-body"></div>
+                    </div>
+                </div>
+
+                <div class="tab" onclick="toggleFolder('fPink')">Final Build</div>
+                <div class="folder-wrapper">
+                    <div class="folder-body" onclick="toggleFolder('fPink')"></div>
+                    <div class="doc-paper">
+                        <div class="doc-paper-inner">
+                            <h3>&#10022; System Information </h3>
+                            <p>Sau nhiều lần debug cuộc đời, hệ thống cuối cùng cũng hoạt động hoàn thành.</p>
+                            <ul>
+                                <li>RAM: Không đủ sau mùa đồ án</li>
+                                <li>Thành tựu: Cuối cùng cũng tốt nghiệp</li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HỒ SƠ XANH -->
+            <div class="folder blue" id="fBlue">
+                <div class="deco deco-vinyl">
+                    <div class="vinyl-label">
+                        <span class="vt1">December</span>
+                        <span class="vt2">Photo Dump</span>
+                    </div>
+                </div>
+
+                <div class="tab" onclick="toggleFolder('fBlue')">Event Details</div>
+                <div class="folder-wrapper">
+                    <div class="folder-body" onclick="toggleFolder('fBlue')"></div>
+                    <div class="doc-paper">
+                        <div class="doc-paper-inner">
+                            <h3>&#10022; Thời gian địa điểm rõ ràng</h3>
+                            <p>🎓 Sự kiện: Graduation Ceremony</p>
+                            <ul>
+                                <li>⏰ Thời gian khởi chạy: 08:00 AM</li>
+                                <li>📍 Tại: Hội trường 300 HUMG</li>
+                                <li>⚠️ Vui lòng có mặt trước giờ bắt đầu.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HỒ SƠ NÂU -->
+            <div class="folder brown" id="fBrown">
+                <div class="deco deco-polaroid">
+                    <div class="polaroid-img"></div>
+                    <div class="polaroid-cap">december memories</div>
+                </div>
+                <div class="deco deco-paperclip">
+                    <svg width="16" height="40" viewBox="0 0 16 40" fill="none">
+                        <path d="M8 2C5 2 2.5 4.5 2.5 7.5V28C2.5 33.5 6.5 37 11 37C13.5 37 15 35.5 15 33V10C15 7.5 13 6 11 6C9 6 7 7.5 7 10V26" stroke="#999" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+
+                <div class="tab" onclick="toggleFolder('fBrown')">Dear you </div>
+                <div class="folder-wrapper">
+                    <div class="folder-body" onclick="toggleFolder('fBrown')"></div>
+                    <div class="doc-paper">
+                        <div class="doc-paper-inner">
+                            <h3>&#10022; Office Analog Trend</h3>
+                            <p>Cảm ơn vì đã đồng hành cùng mình trong hành trình “university.exe”.</p>
+                            <p>Mong rằng bạn sẽ tham dự buổi release chính thức của phiên bản Kĩ Sư Công nghệ Thông tin này</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="rsvp-section">
+            <a class="btn-rsvp" href="https://m.me/100041614030885?hash=AbaomqgXWdcS98Xl&source_id=8585216&text=Yass%20t%C3%B4i%20c%C3%B3%20m%E1%BA%B7t%20!" target="_blank" rel="noopener">
+                Tham gia
+            </a>
+            <p class="rsvp-hint">Đồng ý đồng ý đông ý !!!</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function toggleFolder(id) {
+        const el = document.getElementById(id);
+        const isOpen = el.classList.contains('active');
+
+        document.querySelectorAll('.folder.active').forEach(f => {
+            if (f.id !== id) {
+                f.classList.remove('active');
+                const w = f.querySelector('.folder-wrapper');
+                w.style.transition = 'none';
+                w.style.height = '145px';
+                requestAnimationFrame(() => {
+                    w.style.transition = '';
+                    w.style.height = '';
+                });
+            }
+        });
+
+        if (isOpen) {
+            el.classList.remove('active');
+            const wrapper = el.querySelector('.folder-wrapper');
+            wrapper.style.height = '145px';
+            setTimeout(() => { wrapper.style.height = ''; }, 500);
+        } else {
+            openFolder(el);
+        }
+    }
+
+    function openFolder(el) {
+        const wrapper = el.querySelector('.folder-wrapper');
+        const paper = el.querySelector('.doc-paper');
+
+        el.classList.add('active');
+
+        requestAnimationFrame(() => {
+            const paperH = paper.scrollHeight;
+            const targetH = Math.max(145, 8 + paperH + 8);
+            wrapper.style.height = targetH + 'px';
+        });
+    }
+</script>
+
+</body>
+</html>
